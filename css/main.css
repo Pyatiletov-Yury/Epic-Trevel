@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    color: #81B4BD;
+    text-decoration: underline;
+}
+.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container.container-small {
+    width: 1000px;
+}
+
+.none {
+    display: none !important;
+}
+
+.title-1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.title-1 span {
+    color: #81B4BD;
+}
+
+.title-2 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.title-3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.visualy-hidden {
+	clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    z-index: 19;
+    padding: 40px 0;
+}
+
+.header-bg {
+    background-color: #F6F6F6;
+}
+
+.header-white-bg {
+    background-color: #FFF !important;
+}
+
+/* Nav */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-list a {
+    color: #000;
+    transition: color 0.2s ease-in;
+}
+
+.nav-list a.active {
+    color: #81B4BD;
+}
+
+.nav-list a:hover {
+    color: #00CEB5;
+}
+
+.btn-mobile-nav {
+	display: none;
+}
+
+/* Mobile-nav */
+
+.mobile-nav {
+    z-index: 9;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #F6F6F6;
+    align-items: center;
+    display: none;
+}
+
+.mobile-nav.open {
+    display: flex;
+}
+
+.mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+.mobile-nav-list a {
+    color: #000;
+}
+
+/* promo */
+
+.promo {
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+    height: 500px;
+    background-color: #423b3b;
+    background-image: url(./../img/promo/promo-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 40px;
+    color: #fff;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .promo {
+        background-image: url(./../img/promo/promo-bg@2x.jpg);
+    }
+}
+.promo-title {
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.promo-text {
+    font-size: 24px;
+}
+
+/* main-content */
+
+.main-content {
+    padding: 90px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+}
+.content-row {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+.content-row.content-row-reverse {
+    flex-direction: row-reverse;
+}
+.content-img {
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 40px;
+}
+.content-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.content-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+.content-text a {
+    color: #81B4BD;
+    text-decoration: underline;
+}
+
+/* Tours Page */
+
+.text-center {
+    text-align: center;
+}
+
+/* Inner Page */
+
+.inner-page {
+    padding: 90px 0;
+}
+.inner-page-title-wrapper {
+    margin-bottom: 60px;
+}
+
+/* Cards */
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 30px;
+}
+.card {
+    width: 370px;
+}
+.card-img {
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+.card-desc p {
+    line-height: 1.5;
+}
+.card-desc a {
+    color: #81B4BD;
+    text-decoration: underline;
+}
+
+/* Article */
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+.article-content p+p {
+    margin-top: 30px;
+}
+.article-img {
+    margin: 40px 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Contacts Page */
+
+.contacts-colums {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 100px;
+}
+
+/* Form */
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px 0 rgba(211, 211, 211, 0.5);
+}
+
+/* Custom radio buttens */
+
+.fake-radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #b5dee5;
+    background: #eff9fb;
+}
+.fake-radio::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    background: #37B6CC;
+    transition: all 0.2s ease-in;
+}
+.real-radio:checked + .fake-radio::after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Custom checkboxes */
+
+.fake-checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    border: 1px solid #b5dee5;
+    background: #eff9fb;
+}
+.fake-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 16px;
+    height: 13px;
+    background-image: url(./../img/icons/tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.2s ease-in;
+}
+.real-checkbox:checked + .fake-checkbox::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Addres */
+
+.addres-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 470px;
+}
+.addres-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.addres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.addres-list li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.input {
+    width: 100%;
+    padding: 14px 20px;
+    background: #EFF9FB;
+    border: 1px solid #b5dee5;
+    border-radius: 2px;
+    height: 50px;
+    color: #36727d;
+}
+.input::placeholder {
+    font-size: 16px;
+    color: #a3c9dc;
+}
+.input-50 {
+    flex: 1;
+}
+.radio-list,
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.radio-list label,
+.checkbox-list label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.radio-list label input,
+.checkbox-list label input {
+    flex-shrink: 0;
+}
+.submit-button {
+    align-self: flex-start;
+    padding: 12px 36px 13px;
+    height: 50px;
+    box-shadow: 0 8px 20px 0 rgba(129, 180, 189, 0.35);
+    background: #81b4bd;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    transition: all 0.2s ease-in;
+}
+.submit-button:hover {
+    opacity: 0.8;
+}
+.submit-button:active {
+    opacity: 1;
+    background: #658d94;
+}
+
+.yandex-map {
+    width: 100%;
+    height: 375px;
+}
+.google-map {
+    width: 100%;
+    height: 375px;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: auto;
+    background-color: #111111;
+    padding: 60px 0;
+    color: #ffffff;
+}
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer-copyright {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.3);
+}
+.footer-contacts {
+    text-align: right;
+}
+.footer-phone {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+}
+.footer-email {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #00BDA6;
+    margin-bottom: 10px;
+}
+.footer-address {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+}
